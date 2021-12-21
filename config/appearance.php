@@ -1,69 +1,67 @@
 <?php
 /**
- * Genesis Sample appearance settings.
+ * Carmel appearance settings.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
-$genesis_sample_default_colors = [
+$carmel_default_colors = [
 	'link'   => '#0073e5',
 	'accent' => '#0073e5',
 ];
 
-$genesis_sample_link_color = get_theme_mod(
-	'genesis_sample_link_color',
-	$genesis_sample_default_colors['link']
+$carmel_link_color = get_theme_mod(
+	'carmel_link_color',
+	$carmel_default_colors['link']
 );
 
-$genesis_sample_accent_color = get_theme_mod(
-	'genesis_sample_accent_color',
-	$genesis_sample_default_colors['accent']
+$carmel_accent_color = get_theme_mod(
+	'carmel_accent_color',
+	$carmel_default_colors['accent']
 );
 
-$genesis_sample_link_color_contrast   = genesis_sample_color_contrast( $genesis_sample_link_color );
-$genesis_sample_link_color_brightness = genesis_sample_color_brightness( $genesis_sample_link_color, 35 );
+$carmel_link_color_contrast   = carmel_color_contrast( $carmel_link_color );
+$carmel_link_color_brightness = carmel_color_brightness( $carmel_link_color, 35 );
 
 return [
 	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
 	'content-width'        => 1062,
-	'button-bg'            => $genesis_sample_link_color,
-	'button-color'         => $genesis_sample_link_color_contrast,
-	'button-outline-hover' => $genesis_sample_link_color_brightness,
-	'link-color'           => $genesis_sample_link_color,
-	'default-colors'       => $genesis_sample_default_colors,
+	'button-bg'            => $carmel_link_color,
+	'button-color'         => $carmel_link_color_contrast,
+	'button-outline-hover' => $carmel_link_color_brightness,
+	'link-color'           => $carmel_link_color,
+	'default-colors'       => $carmel_default_colors,
 	'editor-color-palette' => [
 		[
-			'name'  => __( 'Custom color', 'genesis-sample' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
+			'name'  => __( 'Custom color', 'carmel' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
 			'slug'  => 'theme-primary',
-			'color' => $genesis_sample_link_color,
+			'color' => $carmel_link_color,
 		],
 		[
-			'name'  => __( 'Accent color', 'genesis-sample' ),
+			'name'  => __( 'Accent color', 'carmel' ),
 			'slug'  => 'theme-secondary',
-			'color' => $genesis_sample_accent_color,
+			'color' => $carmel_accent_color,
 		],
 	],
 	'editor-font-sizes'    => [
 		[
-			'name' => __( 'Small', 'genesis-sample' ),
+			'name' => __( 'Small', 'carmel' ),
 			'size' => 12,
 			'slug' => 'small',
 		],
 		[
-			'name' => __( 'Normal', 'genesis-sample' ),
+			'name' => __( 'Normal', 'carmel' ),
 			'size' => 18,
 			'slug' => 'normal',
 		],
 		[
-			'name' => __( 'Large', 'genesis-sample' ),
+			'name' => __( 'Large', 'carmel' ),
 			'size' => 20,
 			'slug' => 'large',
 		],
 		[
-			'name' => __( 'Larger', 'genesis-sample' ),
+			'name' => __( 'Larger', 'carmel' ),
 			'size' => 24,
 			'slug' => 'larger',
 		],

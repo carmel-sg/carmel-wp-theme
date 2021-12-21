@@ -1,13 +1,11 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * Carmel child theme.
  *
  * Theme supports.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://my.studiopress.com/themes/genesis-sample/
  */
 
 return [
@@ -36,7 +34,7 @@ return [
 	'genesis-after-entry-widget-area' => '',
 	'genesis-footer-widgets'          => 3,
 	'genesis-menus'                   => [
-		'primary'   => __( 'Header Menu', 'genesis-sample' ),
-		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
+		'primary'   => __( 'Header Menu', 'carmel' ),
+		'secondary' => __( 'Footer Menu', 'carmel' ),
 	],
 ];

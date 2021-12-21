@@ -1,18 +1,16 @@
 <?php
 /**
- * StudioPress WPForms helper functions.
+ * Carmel WPForms helper functions.
  *
  * Assists with the creation of a WPForms form, and the replacement of contact
  * page content with a working contact form block during one-click theme setup.
  *
- * @package StudioPress
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
 /**
- * Creates a WPForms form if one added by a StudioPress theme does not exist.
+ * Creates a WPForms form if one added by a Carmel theme does not exist.
  *
  * @since 2.10.0
  *
@@ -52,7 +50,7 @@ function studiopress_maybe_create_wpforms_form() { // phpcs:ignore -- studiopres
 
 	// Creates a form using the WPForms 'contact' template.
 	$new_form_id = wpforms()->form->add(
-		esc_html__( 'Simple Contact Form', 'genesis-sample' ),
+		esc_html__( 'Simple Contact Form', 'carmel' ),
 		[],
 		[
 			'template' => 'contact',

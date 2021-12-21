@@ -1,23 +1,21 @@
 <?php
 /**
- * Genesis Sample.
+ * Carmel.
  *
  * About page content optionally installed after theme activation.
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
 // Photo by Fabrice Villard on Unsplash.
-$genesis_sample_about_image_url = CHILD_URL . '/config/import/images/about.jpg';
+$carmel_about_image_url = CHILD_URL . '/config/import/images/about.jpg';
 
 return <<<CONTENT
 <!-- wp:image {"id":2141,"align":"center"} -->
-<div class="wp-block-image"><figure class="aligncenter"><img src="$genesis_sample_about_image_url" alt="" class="wp-image-2141"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="$carmel_about_image_url" alt="" class="wp-image-2141"/></figure></div>
 <!-- /wp:image -->
 
 <!-- wp:genesis-blocks/gb-spacer {"spacerHeight":29} -->
@@ -27,7 +25,7 @@ return <<<CONTENT
 <!-- wp:columns -->
 <div class="wp-block-columns has-2-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph -->
-<p>Hello! We are StudioPress, and  we build themes with an emphasis on typography, white space, and   mobile-optimized design to make your website look absolutely   breathtaking.  </p>
+<p>Hello! We are Carmel, and  we build themes with an emphasis on typography, white space, and   mobile-optimized design to make your website look absolutely   breathtaking.  </p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

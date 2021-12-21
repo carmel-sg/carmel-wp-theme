@@ -1,15 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * Carmel.
  *
  * Block example page content optionally installed after theme activation.
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
 return <<<CONTENT

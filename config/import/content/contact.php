@@ -1,16 +1,14 @@
 <?php
 /**
- * Genesis Sample.
+ * Carmel.
  *
  * Contact page content optionally installed after theme activation.
  * Will create a form with WPForms and embed on the page as a WPForms block.
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
 // Requires helper WPForms function to create a new form.

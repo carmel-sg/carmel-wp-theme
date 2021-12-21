@@ -1,27 +1,25 @@
 <?php
 /**
- * Genesis Sample.
+ * Carmel.
  *
  * Onboarding config to load plugins and homepage content on theme activation.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
-$genesis_sample_shared_content = genesis_get_config( 'onboarding-shared' );
+$carmel_shared_content = genesis_get_config( 'onboarding-shared' );
 
 return [
 	'starter_packs' => [
 		'black-white' => [
-			'title'       => __( 'Black & White', 'genesis-sample' ),
-			'description' => __( 'A pack with a homepage designed with black and white images.', 'genesis-sample' ),
+			'title'       => __( 'Black & White', 'carmel' ),
+			'description' => __( 'A pack with a homepage designed with black and white images.', 'carmel' ),
 			'thumbnail'   => get_stylesheet_directory_uri() . '/config/import/images/thumbnails/home-black-white.jpg',
-			'demo_url'    => 'https://demo.studiopress.com/genesis-sample/',
+			'demo_url'    => 'https://carmel.sg/carmel/',
 			'config'      => [
 				'dependencies'     => [
-					'plugins' => $genesis_sample_shared_content['plugins'],
+					'plugins' => $carmel_shared_content['plugins'],
 				],
 				'content'          => array_merge(
 					[
@@ -40,20 +38,20 @@ return [
 							],
 						],
 					],
-					$genesis_sample_shared_content['content']
+					$carmel_shared_content['content']
 				),
-				'navigation_menus' => $genesis_sample_shared_content['navigation_menus'],
-				'widgets'          => $genesis_sample_shared_content['widgets'],
+				'navigation_menus' => $carmel_shared_content['navigation_menus'],
+				'widgets'          => $carmel_shared_content['widgets'],
 			],
 		],
 		'color'       => [
-			'title'       => __( 'Color', 'genesis-sample' ),
-			'description' => __( 'A pack with a homepage designed with color images.', 'genesis-sample' ),
+			'title'       => __( 'Color', 'carmel' ),
+			'description' => __( 'A pack with a homepage designed with color images.', 'carmel' ),
 			'thumbnail'   => get_stylesheet_directory_uri() . '/config/import/images/thumbnails/home-color.jpg',
-			'demo_url'    => 'https://demo.studiopress.com/genesis-sample/home-color/',
+			'demo_url'    => 'https://carmel.sg/carmel/home-color/',
 			'config'      => [
 				'dependencies'     => [
-					'plugins' => $genesis_sample_shared_content['plugins'],
+					'plugins' => $carmel_shared_content['plugins'],
 				],
 				'content'          => array_merge(
 					[
@@ -72,10 +70,10 @@ return [
 							],
 						],
 					],
-					$genesis_sample_shared_content['content']
+					$carmel_shared_content['content']
 				),
-				'navigation_menus' => $genesis_sample_shared_content['navigation_menus'],
-				'widgets'          => $genesis_sample_shared_content['widgets'],
+				'navigation_menus' => $carmel_shared_content['navigation_menus'],
+				'widgets'          => $carmel_shared_content['widgets'],
 			],
 		],
 	],

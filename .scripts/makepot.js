@@ -14,7 +14,6 @@ wpi18n.makepot(
 		potHeaders: {
 			'poedit': true,
 			'x-poedit-basepath': '..',
-			'report-msgid-bugs-to': 'StudioPress <translations@studiopress.com>'
 		}
 	}
 ).then(

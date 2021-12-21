@@ -1,11 +1,9 @@
 <?php
 /**
- * Genesis Sample Simple Social Icons default settings.
+ * Carmel Simple Social Icons default settings.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Carmel
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
 return [
