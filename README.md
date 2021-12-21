@@ -34,7 +34,6 @@ Scripts are also provided to help with CSS linting, CSS autoprefixing, and creat
 You can then type any of these commands:
 
 - `npm run autoprefixer` to add and remove vendor prefixes in `style.css`.
-- `npm run makepot` to regenerate the `languages/carmel.pot` file.
 - `npm run lint:css` to generate a report of style violations for `style.css`.
 - `npm run lint:js` to generate a report of style violations for JavaScript files.
 - `npm run fix:js` to fix any JavaScript style violations that can be corrected automatically.
