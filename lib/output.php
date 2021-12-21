@@ -12,8 +12,6 @@ add_action( 'wp_enqueue_scripts', 'carmel_css' );
 /**
  * Checks the settings for the link color, and accent color.
  * If any of these value are set the appropriate CSS is output.
- *
- * @since 2.2.3
  */
 function carmel_css() {
 

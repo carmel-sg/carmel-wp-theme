@@ -12,8 +12,6 @@ add_filter( 'simple_social_default_styles', 'carmel_social_default_styles' );
 /**
  * Set Simple Social Icon defaults.
  *
- * @since 1.0.0
- *
  * @param array $defaults Social style defaults.
  * @return array Modified social style defaults.
  */

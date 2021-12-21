@@ -11,8 +11,6 @@
 add_action( 'admin_print_styles', 'carmel_remove_woocommerce_notice' );
 /**
  * Removes the default WooCommerce Notice.
- *
- * @since 2.3.0
  */
 function carmel_remove_woocommerce_notice() {
 
@@ -29,8 +27,6 @@ add_action( 'admin_notices', 'carmel_woocommerce_theme_notice' );
 /**
  * Adds a prompt to activate Genesis Connect for WooCommerce
  * if WooCommerce is active but Genesis Connect is not.
- *
- * @since 2.3.0
  */
 function carmel_woocommerce_theme_notice() {
 
@@ -81,8 +77,6 @@ function carmel_woocommerce_theme_notice() {
 add_action( 'wp_ajax_carmel_dismiss_woocommerce_notice', 'carmel_dismiss_woocommerce_notice' );
 /**
  * Adds option to dismiss Genesis Connect for Woocommerce plugin install prompt.
- *
- * @since 2.3.0
  */
 function carmel_dismiss_woocommerce_notice() {
 
@@ -93,8 +87,6 @@ function carmel_dismiss_woocommerce_notice() {
 add_action( 'admin_enqueue_scripts', 'carmel_notice_script' );
 /**
  * Enqueues script to clear the Genesis Connect for WooCommerce plugin install prompt on dismissal.
- *
- * @since 2.3.0
  */
 function carmel_notice_script() {
 
@@ -105,8 +97,6 @@ function carmel_notice_script() {
 add_action( 'switch_theme', 'carmel_reset_woocommerce_notice', 10, 2 );
 /**
  * Clears the Genesis Connect for WooCommerce plugin install prompt on theme change.
- *
- * @since 2.3.0
  */
 function carmel_reset_woocommerce_notice() {
 
@@ -127,8 +117,6 @@ function carmel_reset_woocommerce_notice() {
 add_action( 'deactivated_plugin', 'carmel_reset_woocommerce_notice_on_deactivation', 10, 2 );
 /**
  * Clears the Genesis Connect for WooCommerce plugin prompt on deactivation.
- *
- * @since 2.3.0
  *
  * @param string $plugin The plugin slug.
  * @param bool   $network_deactivating Whether the plugin is deactivated for all sites in the network. or just the current site.

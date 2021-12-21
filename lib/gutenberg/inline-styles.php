@@ -9,8 +9,6 @@
 add_action( 'wp_enqueue_scripts', 'carmel_custom_gutenberg_css' );
 /**
  * Outputs front-end inline styles based on colors declared in config/appearance.php.
- *
- * @since 2.9.0
  */
 function carmel_custom_gutenberg_css() {
 
@@ -54,8 +52,6 @@ add_action( 'enqueue_block_editor_assets', 'carmel_custom_gutenberg_admin_css' )
  *
  * Note this will appear before the style-editor.css injected by JavaScript,
  * so overrides will need to have higher specificity.
- *
- * @since 2.9.0
  */
 function carmel_custom_gutenberg_admin_css() {
 
@@ -92,8 +88,6 @@ CSS;
 /**
  * Generate CSS for editor font sizes from the provided theme support.
  *
- * @since 2.9.0
- *
  * @return string The CSS for editor font sizes if theme support was declared.
  */
 function carmel_inline_font_sizes() {
@@ -119,8 +113,6 @@ CSS;
 
 /**
  * Generate CSS for editor colors based on theme color palette support.
- *
- * @since 2.9.0
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
@@ -151,8 +143,6 @@ CSS;
 
 /**
  * Generate CSS for editor colors based on theme color palette support.
- *
- * @since 3.3.0
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */

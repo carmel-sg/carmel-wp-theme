@@ -21,8 +21,6 @@ add_filter( 'woocommerce_style_smallscreen_breakpoint', 'carmel_woocommerce_brea
 /**
  * Modifies the WooCommerce breakpoints.
  *
- * @since 2.3.0
- *
  * @return string Pixel width of the theme's breakpoint.
  */
 function carmel_woocommerce_breakpoint() {
@@ -46,8 +44,6 @@ function carmel_woocommerce_breakpoint() {
 add_filter( 'genesiswooc_products_per_page', 'carmel_default_products_per_page' );
 /**
  * Sets the default products per page.
- *
- * @since 2.3.0
  *
  * @return int Number of products to show per page.
  */
@@ -78,8 +74,6 @@ function carmel_woocommerce_pagination( $args ) {
 add_action( 'after_switch_theme', 'carmel_woocommerce_image_dimensions_after_theme_setup', 1 );
 /**
  * Defines WooCommerce image sizes on theme activation.
- *
- * @since 2.3.0
  */
 function carmel_woocommerce_image_dimensions_after_theme_setup() {
 
@@ -98,8 +92,6 @@ add_action( 'activated_plugin', 'carmel_woocommerce_image_dimensions_after_woo_a
 /**
  * Defines the WooCommerce image sizes on WooCommerce activation.
  *
- * @since 2.3.0
- *
  * @param string $plugin The path of the plugin being activated.
  */
 function carmel_woocommerce_image_dimensions_after_woo_activation( $plugin ) {
@@ -115,8 +107,6 @@ function carmel_woocommerce_image_dimensions_after_woo_activation( $plugin ) {
 
 /**
  * Updates WooCommerce image dimensions.
- *
- * @since 2.3.0
  */
 function carmel_update_woocommerce_image_dimensions() {
 
@@ -132,8 +122,6 @@ function carmel_update_woocommerce_image_dimensions() {
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'carmel_gallery_image_thumbnail' );
 /**
  * Filters the WooCommerce gallery image dimensions.
- *
- * @since 2.6.0
  *
  * @param array $size The gallery image size and crop arguments.
  * @return array The modified gallery image size and crop arguments.

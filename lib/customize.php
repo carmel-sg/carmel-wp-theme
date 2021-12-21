@@ -12,8 +12,6 @@ add_action( 'customize_register', 'carmel_customizer_register' );
 /**
  * Registers settings and controls with the Customizer.
  *
- * @since 2.2.3
- *
  * @param WP_Customize_Manager $wp_customize Customizer object.
  */
 function carmel_customizer_register( $wp_customize ) {

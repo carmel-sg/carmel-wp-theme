@@ -9,8 +9,6 @@
 add_action( 'wp_enqueue_scripts', 'carmel_enqueue_gutenberg_frontend_styles' );
 /**
  * Enqueues Gutenberg front-end styles.
- *
- * @since 2.7.0
  */
 function carmel_enqueue_gutenberg_frontend_styles() {
 
@@ -26,8 +24,6 @@ function carmel_enqueue_gutenberg_frontend_styles() {
 add_action( 'enqueue_block_editor_assets', 'carmel_block_editor_styles' );
 /**
  * Enqueues Gutenberg admin editor fonts and styles.
- *
- * @since 2.7.0
  */
 function carmel_block_editor_styles() {
 
@@ -49,8 +45,6 @@ add_filter( 'body_class', 'carmel_blocks_body_classes' );
  * - `has-no-blocks` if content contains no blocks.
  * - `first-block-[block-name]` to allow changes based on the first block (such as removing padding above a Cover block).
  * - `first-block-align-[alignment]` to allow styling adjustment if the first block is wide or full-width.
- *
- * @since 2.8.0
  *
  * @param array $classes The original classes.
  * @return array The modified classes.

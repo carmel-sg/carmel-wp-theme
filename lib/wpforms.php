@@ -12,8 +12,6 @@
 /**
  * Creates a WPForms form if one added by a Carmel theme does not exist.
  *
- * @since 2.10.0
- *
  * @return int|null ID of form if one exists or gets created. Null if form creation fails or WPForms is inactive.
  */
 function studiopress_maybe_create_wpforms_form() { // phpcs:ignore -- studiopress prefix for functions shared between themes.
@@ -67,8 +65,6 @@ function studiopress_maybe_create_wpforms_form() { // phpcs:ignore -- studiopres
 
 /**
  * Replace contact page placeholder content with a block displaying the form.
- *
- * @since 2.10.0
  *
  * @param array $content The content config.
  * @param array $imported_posts Imported posts with content short name as keys and IDs as values.

@@ -11,8 +11,6 @@
 /**
  * Calculates if white or gray would contrast more with the provided color.
  *
- * @since 2.2.3
- *
  * @param string $color A color in hex format.
  * @return string The hex code for the most contrasting color: dark grey or white.
  */
@@ -32,8 +30,6 @@ function carmel_color_contrast( $color ) {
 /**
  * Generates a lighter or darker color from a starting color.
  * Used to generate complementary hover tints from user-chosen colors.
- *
- * @since 2.2.3
  *
  * @param string $color A color in hex format.
  * @param int    $change The amount to reduce or increase brightness by.
