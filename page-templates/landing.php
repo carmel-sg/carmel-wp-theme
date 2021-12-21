@@ -14,8 +14,6 @@ add_filter( 'body_class', 'carmel_landing_body_class' );
 /**
  * Adds landing page body class.
  *
- * @since 1.0.0
- *
  * @param array $classes Original body classes.
  * @return array Modified body classes.
  */
@@ -32,8 +30,6 @@ remove_action( 'genesis_before_header', 'genesis_skip_links', 5 );
 add_action( 'wp_enqueue_scripts', 'carmel_dequeue_skip_links' );
 /**
  * Dequeues Skip Links Script.
- *
- * @since 1.0.0
  */
 function carmel_dequeue_skip_links() {
 
