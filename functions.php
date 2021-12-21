@@ -221,3 +221,6 @@ function carmel_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+// Enables block-based widget editor.
+add_filter( 'use_widgets_block_editor', '__return_true' );
