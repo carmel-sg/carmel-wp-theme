@@ -26,7 +26,6 @@
 		"lint:js": "eslint .",
 		"fix:js": "eslint . --fix",
 		"zip": "node .scripts/makezip.js",
-		"prep:piservice": "node .scripts/makePIServiceData.js"
 	},
 	"browserslist": [
 		"> 1%",
