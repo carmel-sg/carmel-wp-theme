@@ -32,7 +32,7 @@ return [
 		'skip-links',
 	],
 	'genesis-after-entry-widget-area' => '',
-	'genesis-footer-widgets'          => 3,
+	'genesis-footer-widgets'          => 5,
 	'genesis-menus'                   => [
 		'primary'   => __( 'Header Menu', 'carmel' ),
 		'secondary' => __( 'Footer Menu', 'carmel' ),
