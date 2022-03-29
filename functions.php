@@ -236,7 +236,7 @@ unregister_sidebar("header-right");
 add_action("genesis_header_right", "hook_header_right");
 function hook_header_right()
 {
-    echo '<a class="button join-us" href="/mount-caramel/join-us-in-person">Join Us In Person</a>';
+dynamic_sidebar( 'joinusonline-sidebar' );
 }
 add_action("widgets_init", "hello_bar_extra_widgets");
 
@@ -347,9 +347,6 @@ function sp_read_more_link()
         get_permalink() .
         '">[Continue Reading]</a>';
 }
-remove_action("genesis_entry_footer", "genesis_post_meta");
-remove_action("genesis_entry_header", "genesis_post_info", 12);
-
 add_shortcode("news_loop", "news_loop_shortcode");
 function news_loop_shortcode()
 {
@@ -395,5 +392,16 @@ function news_loop_shortcode()
      endif;
      return ob_get_clean();
 }
-
+// Register Sidebar for Book CPT
+genesis_register_sidebar(
+    array(
+        'id'          => 'joinusonline-sidebar',
+        'name'        => __( 'Joinusonline Sidebar', 'genesis' ),
+        'description' => __( 'Primary sidebar for Joinusonline', 'genesis' ),
+    )
+);
+function wpize_do_sidebar() {
+    dynamic_sidebar( 'joinusonline-sidebar' );
+}
+add_action( 'genesis_sidebar', 'wpize_do_sidebar' );
 ?>
