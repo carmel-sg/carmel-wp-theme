@@ -404,4 +404,23 @@ function wpize_do_sidebar() {
     dynamic_sidebar( 'joinusonline-sidebar' );
 }
 add_action( 'genesis_sidebar', 'wpize_do_sidebar' );
+
+// Register new sidebar
+genesis_register_sidebar( array(
+    'id' => 'job-single-sidebar',
+    'name' => 'Single Job Sidebar',
+    'description' => 'This is the sidebar for single job pages.',
+) );
+add_action('get_header','cd_change_genesis_sidebar');
+function cd_change_genesis_sidebar() {
+    if ( is_singular('news')) { // Check if we're on a single post for my CPT called "jobs"
+        remove_action( 'genesis_sidebar', 'genesis_do_sidebar' ); //remove the default genesis sidebar
+        add_action( 'genesis_sidebar', 'cd_do_sidebar' ); //add an action hook to call the function for my custom sidebar
+    }
+}
+
+//Function to output my custom sidebar
+function cd_do_sidebar() {
+    dynamic_sidebar( 'job-single-sidebar' );
+}
 ?>
