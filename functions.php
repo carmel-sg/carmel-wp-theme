@@ -407,9 +407,9 @@ add_action( 'genesis_sidebar', 'wpize_do_sidebar' );
 
 // Register new sidebar
 genesis_register_sidebar( array(
-    'id' => 'job-single-sidebar',
-    'name' => 'Single Job Sidebar',
-    'description' => 'This is the sidebar for single job pages.',
+    'id' => 'news-single-sidebar',
+    'name' => 'News Sidebar',
+    'description' => 'This is the sidebar for single news pages.',
 ) );
 add_action('get_header','cd_change_genesis_sidebar');
 function cd_change_genesis_sidebar() {
@@ -421,6 +421,6 @@ function cd_change_genesis_sidebar() {
 
 //Function to output my custom sidebar
 function cd_do_sidebar() {
-    dynamic_sidebar( 'job-single-sidebar' );
+    dynamic_sidebar( 'news-single-sidebar' );
 }
 ?>

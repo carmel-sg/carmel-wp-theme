@@ -3,9 +3,6 @@ jQuery("body").on("click", ".site-header > .wrap .menu-toggle", function() {
  });
 
 jQuery( document ).ready(function() {
-if (jQuery( "body" ).hasClass('single')) {
-jQuery( "header" ).addClass( 'header-black');
-} 
 jQuery('.footer-widgets-1,.footer-widgets-2,.footer-widgets-3,.footer-widgets-4,.footer-widgets-5').wrapAll('<div class="footer-main"></div>');
 jQuery(window).scroll(function () {    
     if (jQuery(this).scrollTop() > 1) {

@@ -8,7 +8,7 @@
  */
 function sk_change_genesis_primary_sidebar() {
 
-	if( is_active_sidebar( 'job-single-sidebar' ) ) {
+	if( is_active_sidebar( 'news-single-sidebar' ) ) {
 
 		// Remove the Primary Sidebar from the Primary Sidebar area.
 		remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
@@ -20,7 +20,7 @@ function sk_change_genesis_primary_sidebar() {
 
 function sk_do_sidebar() {
 
-	dynamic_sidebar( 'job-single-sidebar' );
+	dynamic_sidebar( 'news-single-sidebar' );
 
 }
 
@@ -57,7 +57,7 @@ function custom_entry_content() {
     <div class="col-md-3">
         <div class="right">
         	<h2>Latest News</h2>
-           <?php dynamic_sidebar( 'job-single-sidebar' );?>
+           <?php dynamic_sidebar( 'news-single-sidebar' );?>
         </div>
     </div>
 </div>

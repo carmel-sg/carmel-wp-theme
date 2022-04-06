@@ -275,8 +275,8 @@ html {
 --------------------------------------------- */
 @font-face {
 	font-family: 'awkward alone';
-	src: url('/mount-caramel/wp-content/themes/carmel-wp-theme-main/font/awkwardalone.woff2') format('woff2'),
-		url('/mount-caramel/wp-content/themes/carmel-wp-theme-main/font/awkwardalone.woff') format('woff');
+	src: url('font/awkwardalone.woff2') format('woff2'),
+		url('font/awkwardalone.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -1345,21 +1345,17 @@ p.entry-meta {
 	margin: 0;
 }
 .mobbtn a {
-	font-weight: 500 !important;
-	position: relative;
+ 	position: relative;
 	border-radius: 5px !important;
-	font-family: "Lato", sans-serif !important;
 	border: 1px solid #fff;
 	min-width: 198px !important;
-	font-size: 13px !important;
-	display: inline-block;
+ 	display: inline-block;
 	padding: 11px 15px !important;
 }
 .mobbtn a:hover {
-	background-color: #fff !important;
+	background-color: #fff;
 	color: #8d0101 !important;
-	border-color: #fff !important;
-}
+ }
 /* Media Queries
 ---------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) {
@@ -1678,30 +1674,11 @@ p.entry-meta {
 		page-break-before: avoid;
 	}
 }
-.hello-bar {
-	font-size: 15px;
-	font-weight: 700;
-	padding: 10px 10px;
-	text-align: left;
-	width: 100%;
-	z-index: 9999;
-	color: #000;
-	background-color: #8D0101;
-	text-align: center;
-	position: relative;
-	z-index: 999999;
-}
+
 .preheader {
 	text-align: center;
 }
-.hello-bar p {
-	margin: 0;
-	color: #fff;
-	font-size: 13px;
-	text-transform: uppercase;
-	font-family: Lato;
-	font-weight: 400;
-}
+
 .site-header {
 	position: fixed;
 	width: 100%;
@@ -1734,10 +1711,12 @@ p.entry-meta {
 	display: -ms-flex;
 	display: -webkit-flex;
 	align-items: center;
+	position: relative;
 }
 .site-header .nav-primary {
 	margin: 0 auto;
 	padding: 0;
+	position: static;
 }
 .site-header .widget-area.header-widget-area {
 	order: 2;
@@ -1757,6 +1736,8 @@ p.entry-meta {
 	border: 1px solid #fff;
 	position: relative;
 	border-radius: 5px;
+	opacity: 0;
+    visibility: hidden;
 }
 .button {
 	border-radius: 0;
@@ -2125,11 +2106,11 @@ body .stories-sec button.slick-arrow {
 	margin-top: -40px !important;
 }
 body .stories-sec .wppsac-post-carousel.design-1 button.slick-prev {
-	background-image: url(/mount-caramel/wp-content/uploads/2022/02/slick-left.png) !important;
+	background-image: url(images/slick-left.png) !important;
 	left: -30px !important;
 }
 body .stories-sec .wppsac-post-carousel.design-1 button.slick-next {
-	background-image: url(/mount-caramel/wp-content/uploads/2022/02/slick-right.png) !important;
+	background-image: url(images/slick-right.png) !important;
 	right: -30px !important;
 }
 body .stories-sec .wppsac-post-carousel.design-1 .slick-arrow:hover,
@@ -2142,11 +2123,11 @@ body .stories-sec .slick-track {
 }
 body .stories-sec .wppsac-post-carousel.design-1 button.slick-prev:hover,
 body .stories-sec .wppsac-post-carousel.design-1 button.slick-prev:focus {
-	background-image: url(/mount-caramel/wp-content/uploads/2022/03/slick-left-white.png) !important;
+	background-image: url(images/slick-left-white.png) !important;
 }
 body .stories-sec .wppsac-post-carousel.design-1 button.slick-next:hover,
 body .stories-sec .wppsac-post-carousel.design-1 button.slick-next:focus {
-	background-image: url(/mount-caramel/wp-content/uploads/2022/03/slick-right-white.png) !important;
+	background-image: url(images/slick-right-white.png) !important;
 }
 body .stories-sec .slick-slide {
 	height: inherit !important;
@@ -2512,7 +2493,7 @@ body .stories-sec .slick-arrow {
 .event-time h2 {
 	margin-bottom: 5px;
 }
-.site-header.header-black {
+.single .site-header  {
 	background-color: #8D0101;
 }
 .single main.content {
@@ -2529,10 +2510,10 @@ body .stories-sec .slick-arrow {
 object-fit: cover;
 object-position: center;
 }
-.single main.content .entry-header.header-black {
+.single main.content .entry-header {
 	padding-top: 0;
 }
-.single main.content .entry-header.header-black h1 {
+.single main.content .entry-header h1 {
 	font-size: 36px;
 	color: #3E4852;
 }
@@ -2546,9 +2527,7 @@ object-position: center;
 	color: #3E4852;
 	opacity: .8;
 }
-.single .hello-bar {
-	display: none !important;
-}
+
 .single .site-header {
 	top: 0 !important;
 }
@@ -2745,6 +2724,36 @@ padding: 24px 24px 15px;
 	opacity: .8;
 	font-size: 15px;
 }
+/************BTN**************/
+.genesis-nav-menu li.join-us-menu{
+	position: absolute !important;
+	right: 15px;
+}
+.genesis-nav-menu li.join-us-menu a {
+    background-color: #fff;
+    font-size: 13px;
+    color: #8D0101;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 8px 20px;
+    min-width: inherit;
+    width: auto;
+    border: 1px solid #fff;
+    position: relative;
+    border-radius: 5px;
+    line-height: 1.6;
+    top: -1px;
+}
+.genesis-nav-menu li.join-us-menu a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+.genesis-nav-menu li.join-us-menu a:after{
+	display: none;
+}
+/****************/
+
+
 
 /********************************************** start of media**************************************** */
 @media (min-width: 601px) {
@@ -2899,10 +2908,7 @@ padding: 24px 24px 15px;
 	}
 	.site-header .nav-primary.genesis-responsive-menu[style="display: block;"] {
 		left: -100% !important;
-	} 
-	.hello-bar p {
-		font-size: 11px;
-	}
+	}  
 	.site-header .title-area {
 		flex: 0 0 228px;
 		max-width: 228px;
@@ -2915,6 +2921,9 @@ padding: 24px 24px 15px;
 	.site-header .nav-primary.genesis-responsive-menu .menu>li {
 		margin-top: 15px;
 		margin-bottom: 25px;
+	}
+	.genesis-nav-menu li.join-us-menu{
+		display: none !important;
 	}
 	.common-btn a {
 		font-size: 13px !important;
@@ -2963,7 +2972,7 @@ padding: 24px 24px 15px;
 	.footerwidgetheader-container .common-btn a {
 		font-size: 15px !important;
 	}
-	.single main.content .entry-header.header-black h1 {
+	.single main.content .entry-header h1 {
 		font-size: 20px;
 	}
 	.event-time h2 {
@@ -3001,9 +3010,6 @@ padding: 24px 24px 15px;
 }
 }
 @media (max-width: 800px) {
-	.hello-bar {
-		margin-top: 0;
-	}
 	.preheaderright {
 		text-align: left;
 	}
