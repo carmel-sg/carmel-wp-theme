@@ -47,6 +47,8 @@ function carmel_color_brightness( $color, $change ) {
 	$green = max( 0, min( 255, $green + $change ) );
 	$blue  = max( 0, min( 255, $blue + $change ) );
 
-	return '#' . dechex( $red ) . dechex( $green ) . dechex( $blue );
+	$hex = '%02X';
+
+	return '#' . sprintf( $hex, $red ) . sprintf( $hex, $green ) . sprintf( $hex, $blue );
 
 }

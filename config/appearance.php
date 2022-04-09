@@ -7,8 +7,8 @@
  */
 
 $carmel_default_colors = [
-	'link'   => '#0073e5',
-	'accent' => '#0073e5',
+	'link'   => '#8d0101',
+	'accent' => '#f19e04',
 ];
 
 $carmel_link_color = get_theme_mod(
@@ -25,7 +25,7 @@ $carmel_link_color_contrast   = carmel_color_contrast( $carmel_link_color );
 $carmel_link_color_brightness = carmel_color_brightness( $carmel_link_color, 35 );
 
 return [
-	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
+	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Lato:400,400i,500,600,700&display=swap',
 	'content-width'        => 1062,
 	'button-bg'            => $carmel_link_color,
 	'button-color'         => $carmel_link_color_contrast,

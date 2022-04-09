@@ -176,7 +176,7 @@ add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
 // Repositions the secondary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
+add_action( 'genesis_before_footer', 'genesis_do_subnav', 0 );
 
 add_filter( 'wp_nav_menu_args', 'carmel_secondary_menu_args' );
 /**
@@ -224,3 +224,140 @@ function carmel_comments_gravatar( $args ) {
 
 // Enables block-based widget editor.
 add_filter( 'use_widgets_block_editor', '__return_true' );
+
+
+add_filter('excerpt_length', 'carmel_excerpt_length');
+/**
+ * Modifies size of the exerpt length.
+ *
+ * @param int $size Original length.
+ */
+function carmel_excerpt_length( $length ) {
+
+	return 25;
+
+}
+
+add_filter( 'genesis_pre_get_option_site_layout', 'carmel_layout_override' );
+/**
+ * Overrides the layout to full-width-content if not singular.
+ */
+function carmel_layout_override( $opt ) {
+
+	if ( ! is_singular() ) {
+
+		$opt = 'full-width-content';
+		return $opt;
+
+	}
+
+}
+
+// Move descriptions out of site-inner.
+remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
+add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description' );
+remove_action( 'genesis_before_loop', 'genesis_do_author_title_description', 15 );
+add_action( 'genesis_after_header', 'genesis_do_author_title_description' );
+remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
+add_action( 'genesis_after_header', 'genesis_do_cpt_archive_title_description' );
+remove_action( 'genesis_before_loop', 'genesis_do_date_archive_title' );
+add_action( 'genesis_after_header', 'genesis_do_date_archive_title' );
+remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
+add_action( 'genesis_after_header', 'genesis_do_posts_page_heading' );
+
+add_action( 'genesis_loop', 'carmel_custom_loop' );
+remove_action( 'genesis_loop', 'genesis_do_loop' );
+/**
+ * Custom loop that overrides the layout for archive and search result.
+ */
+function carmel_custom_loop() {
+
+	if ( is_404() ) {
+
+		return;
+
+	}
+
+	if ( is_singular() ) {
+
+		genesis_do_loop();
+
+	}
+
+	else if ( have_posts() ) {
+
+		do_action( 'genesis_before_while' );
+
+		genesis_markup(
+			[
+				'open'   => '<div class="post-grid">',
+			]
+		);
+
+		while ( have_posts() ) {
+
+			the_post();
+
+
+			genesis_markup(
+				[
+					'open'    => '<a %s>',
+					'context' => 'entry',
+					'atts' => [ 'href' => get_the_permalink() ]
+				]
+			);
+
+			remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+			if ( genesis_get_option( 'content_archive_thumbnail' ) ) {
+				echo genesis_get_image(
+					[
+						'format'  => 'html',
+						'size'    => genesis_get_option( 'image_size' ),
+						'context' => 'archive',
+					]
+				);
+			}
+
+			genesis_markup(
+				[
+					'open'   => '<div class="entry-content">',
+				]
+			);
+
+			add_filter( 'genesis_link_post_title', '__return_false' );
+			genesis_do_post_title();
+
+			do_action( 'genesis_entry_content' );
+
+			genesis_markup(
+				[
+					'close'   => '</div>',
+				]
+			);
+
+			genesis_markup(
+				[
+					'close'   => '</a>',
+					'context' => 'entry',
+				]
+			);
+
+		}
+
+		genesis_markup(
+			[
+				'close'   => '</div>',
+			]
+		);
+
+		do_action( 'genesis_after_endwhile' );
+
+	} else {
+
+		do_action( 'genesis_loop_else' );
+
+	}
+
+	genesis_reset_loops();
+
+}
