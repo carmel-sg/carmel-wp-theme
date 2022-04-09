@@ -1591,21 +1591,6 @@ p.entry-meta {
 		font-weight: 700;
 	}
 
-	.genesis-nav-menu > .menu-highlight > a {
-		background-color: #333;
-		border-radius: 3px;
-		color: #fff;
-		font-weight: 600;
-		margin-left: 15px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.genesis-nav-menu > .menu-highlight > a:focus,
-	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: var(--carmel-link-color);
-	}
-
 	.genesis-nav-menu .sub-menu,
 	.genesis-nav-menu .sub-menu a {
 		width: 180px;
@@ -1660,6 +1645,26 @@ p.entry-meta {
 	.nav-primary .genesis-nav-menu a {
 		padding-left: 15px;
 		padding-right: 15px;
+	}	
+
+	.nav-primary .genesis-nav-menu li.menu-highlight::after {
+		display: none;
+	}
+
+	.nav-primary .genesis-nav-menu > .menu-highlight > a {
+		background-color: #fff;
+		border-radius: 5px;
+		color: var(--carmel-link-color);
+		border: 1px solid #fff;
+		font-weight: 600;
+		margin-left: 15px;
+		padding: 12px 25px;
+	}
+
+	.nav-primary .genesis-nav-menu > .menu-highlight > a:focus,
+	.nav-primary .genesis-nav-menu > .menu-highlight > a:hover {
+		background-color: transparent;
+		color: #fff;
 	}
 
 	/* Footer Menu
