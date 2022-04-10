@@ -267,6 +267,21 @@ function carmel_layout_override( $opt ) {
 
 }
 
+add_action('template_redirect', 'carmel_disable_author_archive');
+/**
+ * Returns a 404 for author pages.
+ */
+function carmel_disable_author_archive() {
+
+    global $wp_query;
+
+    if ( is_author() ) {
+        $wp_query->set_404();
+        status_header(404);
+    }
+
+}
+
 // Move descriptions out of site-inner.
 remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
 add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description' );
