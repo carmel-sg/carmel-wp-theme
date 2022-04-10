@@ -170,6 +170,20 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+// Replace site title with logo.
+remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
+add_action( 'genesis_site_title', 'carmel_site_logo' );
+/**
+ * Prints the site logo wrapped in an anchor tag.
+ */
+function carmel_site_logo() {
+
+	$src = get_stylesheet_directory_uri() . '/images/logo.svg';
+	$img = sprintf( '<img src="%1$s" alt="%2$s">', $src, get_bloginfo( 'name', 'display' ) );
+	printf( '<a href="%1$s">%2$s</a>', trailingslashit( home_url() ), $img );
+
+}
+
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );

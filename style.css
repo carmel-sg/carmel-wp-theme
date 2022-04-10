@@ -1012,50 +1012,7 @@ figcaption,
 
 .title-area {
 	float: left;
-	padding-bottom: 25px;
-	padding-top: 25px;
 }
-
-.wp-custom-logo .title-area {
-	max-height: 48px;
-	padding-bottom: 11px;
-	padding-top: 11px;
-	width: auto;
-}
-
-.wp-custom-logo .custom-logo-link {
-	display: block;
-}
-
-.wp-custom-logo .title-area img {
-	width: auto;
-}
-
-.site-title {
-	font-size: 20px;
-	font-weight: 600;
-	line-height: 1;
-	margin-bottom: 0;
-}
-
-.site-title a,
-.site-title a:focus,
-.site-title a:hover {
-	color: #fff;
-	text-decoration: none;
-}
-
-.site-description,
-.wp-custom-logo .site-title {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
-}
-
 
 /* Site Navigation
 ---------------------------------------------------------------------------- */

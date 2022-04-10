@@ -9,12 +9,6 @@
  */
 
 return [
-	'genesis-custom-logo'             => [
-		'height'      => 120,
-		'width'       => 700,
-		'flex-height' => true,
-		'flex-width'  => true,
-	],
 	'html5'                           => [
 		'caption',
 		'comment-form',
