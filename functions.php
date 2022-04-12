@@ -179,7 +179,7 @@ add_action( 'genesis_site_title', 'carmel_site_logo' );
 function carmel_site_logo() {
 
 	$src = get_stylesheet_directory_uri() . '/images/logo.svg';
-	$img = sprintf( '<img src="%1$s" alt="%2$s">', $src, get_bloginfo( 'name', 'display' ) );
+	$img = sprintf( '<img src="%1$s" alt="%2$s" height="64" width="256">', $src, get_bloginfo( 'name', 'display' ) );
 	printf( '<a href="%1$s">%2$s</a>', trailingslashit( home_url() ), $img );
 
 }
