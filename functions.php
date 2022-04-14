@@ -423,4 +423,5 @@ function cd_change_genesis_sidebar() {
 function cd_do_sidebar() {
     dynamic_sidebar( 'news-single-sidebar' );
 }
-?>
+add_filter( 'show_admin_bar', '__return_false' );
+    

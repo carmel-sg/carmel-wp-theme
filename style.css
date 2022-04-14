@@ -1689,7 +1689,7 @@ p.entry-meta {
 	-webkit-transition: .3s all ease-in-out;
 	transition: .3s all ease-in-out;
 	padding: 20px 0;
-	z-index: 9999999;
+	z-index: 9999;
 }
 .site-header+.site-inner {
 	padding-top: 0;
@@ -2493,8 +2493,12 @@ body .stories-sec .slick-arrow {
 .event-time h2 {
 	margin-bottom: 5px;
 }
-.single .site-header  {
+.single .site-header, .error404 .site-header, .archive .site-header, .search .site-header{
 	background-color: #8D0101;
+}
+.error404 .site-header+.site-inner, .archive .site-header+.site-inner, .search .site-header+.site-inner{
+    padding-top: 170px;
+    padding-bottom: 40px;
 }
 .single main.content {
 	padding-top: 170px;
