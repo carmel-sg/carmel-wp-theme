@@ -156,7 +156,6 @@ function carmel_post_type_support() {
 }
 
 // Adds image sizes.
-add_image_size( 'sidebar-featured', 75, 75, true );
 add_image_size( 'genesis-singular-images', 702, 526, true );
 
 // Removes header right widget area.
