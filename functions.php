@@ -157,6 +157,21 @@ function carmel_post_type_support() {
 
 // Adds image sizes.
 add_image_size( 'genesis-singular-images', 702, 526, true );
+add_image_size( 'featured-image', 600, 400, true );
+
+add_filter( 'post_thumbnail_size', 'carmel_override_post_thumbnail_size' );
+/**
+ * Replaces post-thumbnail size with featured-image size.
+ */
+function carmel_override_post_thumbnail_size( $size ) {
+
+	if ( $size === 'post-thumbnail' ) {
+		return 'featured-image';
+	}
+
+	return $size;
+
+}
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
@@ -314,71 +329,74 @@ function carmel_custom_loop() {
 
 	else if ( have_posts() ) {
 
-		do_action( 'genesis_before_while' );
+		echo '<div class="entry-content">';
 
-		genesis_markup(
-			[
-				'open'   => '<div class="post-grid">',
-			]
-		);
+		echo '<ul class="is-flex-container columns-3 wp-block-post-template">';
 
 		while ( have_posts() ) {
 
 			the_post();
 
-
 			genesis_markup(
 				[
-					'open'    => '<a %s>',
+					'open'    => '<li %s>',
 					'context' => 'entry',
-					'atts' => [ 'href' => get_the_permalink() ]
 				]
 			);
 
-			remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 			if ( genesis_get_option( 'content_archive_thumbnail' ) ) {
-				echo genesis_get_image(
+				$img = genesis_get_image(
 					[
 						'format'  => 'html',
 						'size'    => genesis_get_option( 'image_size' ),
 						'context' => 'archive',
+						'attr'    => genesis_parse_attr( 'entry-image', [] ),
 					]
 				);
+		
+				if ( ! empty( $img ) ) {
+					echo '<figure class="wp-block-post-featured-image">';
+					genesis_markup(
+						[
+							'open'    => '<a %s>',
+							'close'   => '</a>',
+							'content' => $img,
+							'context' => 'entry-image-link',
+						]
+					);
+					echo '</figure>';
+				}
 			}
 
-			genesis_markup(
-				[
-					'open'   => '<div class="entry-content">',
-				]
-			);
-
-			add_filter( 'genesis_link_post_title', '__return_false' );
-			genesis_do_post_title();
-
-			do_action( 'genesis_entry_content' );
+			echo '<h2 class="wp-block-post-title">';
 
 			genesis_markup(
 				[
-					'close'   => '</div>',
-				]
-			);
-
-			genesis_markup(
-				[
+					'open'    => '<a %s>',
 					'close'   => '</a>',
+					'content' => get_the_title(),
+					'context' => 'entry-title-link',
+				]
+			);
+
+			echo '</h2>';
+
+			genesis_do_post_content();
+
+			genesis_markup(
+				[
+					'close'   => '</li>',
 					'context' => 'entry',
 				]
 			);
 
 		}
 
-		genesis_markup(
-			[
-				'close'   => '</div>',
-			]
-		);
+		echo '</ul>';
 
-		do_action( 'genesis_after_endwhile' );
+		genesis_posts_nav();
+
+		echo '</div>';
 
 	} else {
 
