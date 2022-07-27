@@ -1006,6 +1006,17 @@ figcaption,
 	height: 300px;
 }
 
+/* Genesis Blocks
+--------------------------------------------- */
+
+.entry-content ol.gpb-number-list {
+	padding: 0;
+}
+
+.entry-content ol.gpb-number-list li {
+	list-style: none;
+}
+
 
 /* Skip Links
 ---------------------------------------------------------------------------- */
