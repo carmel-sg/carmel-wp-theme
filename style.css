@@ -1759,7 +1759,7 @@ p.entry-meta {
 	.footer-widget-area {
 		float: left;
 		margin-bottom: 0;
-		width: calc(100% / 5);
+		width: calc(100% / 3);
 	}
 
 }
