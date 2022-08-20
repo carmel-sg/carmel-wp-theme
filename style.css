@@ -902,6 +902,20 @@ figcaption,
 	text-align: center;
 }
 
+.widget .wp-block-social-links {
+	display: block;
+}
+
+.widget ul.wp-block-social-links li.wp-social-link {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.widget ul.wp-block-social-links li.wp-social-link:last-of-type {
+	margin-right: 0;
+}
+
+
 /* Featured Content
 --------------------------------------------- */
 
