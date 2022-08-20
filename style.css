@@ -909,6 +909,7 @@ figcaption,
 .widget ul.wp-block-social-links li.wp-social-link {
 	display: inline-block;
 	margin-right: 10px;
+	margin-bottom: 20px;
 }
 
 .widget ul.wp-block-social-links li.wp-social-link:last-of-type {
