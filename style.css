@@ -889,6 +889,10 @@ figcaption,
 	font-weight: bold;
 }
 
+.wp-block-pullquote {
+	padding: 0 !important;
+}
+
 
 /* Widgets
 ---------------------------------------------------------------------------- */
