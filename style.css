@@ -859,13 +859,17 @@ figcaption,
 	margin-bottom: 0;
 }
 
+.wp-block-latest-posts {
+	margin: 0;
+}
+
 .wp-block-latest-posts.is-grid {
 	grid-gap: 20px;
 }
 
 .wp-block-latest-posts.is-grid li {
 	position: relative;
-	margin: 0;
+	margin: 0 !important;
 }
 
 .wp-block-latest-posts.is-grid li:hover {
