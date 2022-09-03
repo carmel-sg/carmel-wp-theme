@@ -859,6 +859,33 @@ figcaption,
 	margin-bottom: 0;
 }
 
+.wp-block-latest-posts.is-grid {
+	grid-gap: 20px;
+}
+
+.wp-block-latest-posts.is-grid li {
+	position: relative;
+	margin: 0;
+}
+
+.wp-block-latest-posts.is-grid li:hover {
+	opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+	text-decoration: none;
+	background: rgba(141, 1, 1, .9);
+	padding: 20px;
+	font-weight: bold;
+}
+
+
 /* Widgets
 ---------------------------------------------------------------------------- */
 
