@@ -156,8 +156,8 @@ function carmel_post_type_support() {
 }
 
 // Adds image sizes.
-add_image_size( 'genesis-singular-images', 702, 526, true );
-add_image_size( 'featured-image', 600, 400, true );
+add_image_size( 'genesis-singular-images', 600, 600, true );
+add_image_size( 'featured-image', 600, 600, true );
 
 add_filter( 'post_thumbnail_size', 'carmel_override_post_thumbnail_size' );
 /**
