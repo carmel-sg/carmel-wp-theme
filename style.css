@@ -1124,7 +1124,7 @@ figcaption,
 .site-header {
 	background-color: var(--carmel-link-color);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-	padding: 12px;
+	padding: 6px 12px;
 }
 
 .site-header .wrap {
