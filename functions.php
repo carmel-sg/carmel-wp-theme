@@ -156,7 +156,7 @@ function carmel_post_type_support() {
 }
 
 // Adds image sizes.
-add_image_size( 'genesis-singular-images', 405, 720, true );
+add_image_size( 'genesis-singular-images', 720, 405, true );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
