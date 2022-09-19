@@ -1593,7 +1593,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu li.menu-item:hover::after,
-	.genesis-nav-menu li.current_page_item::after {
+	.genesis-nav-menu li.current-menu-item::after {
 		width: calc(100% - 24px);
 		right: auto;
 		left: 12px;
