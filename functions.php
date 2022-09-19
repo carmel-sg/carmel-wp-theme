@@ -156,22 +156,7 @@ function carmel_post_type_support() {
 }
 
 // Adds image sizes.
-add_image_size( 'genesis-singular-images', 600, 600, true );
-add_image_size( 'featured-image', 600, 600, true );
-
-add_filter( 'post_thumbnail_size', 'carmel_override_post_thumbnail_size' );
-/**
- * Replaces post-thumbnail size with featured-image size.
- */
-function carmel_override_post_thumbnail_size( $size ) {
-
-	if ( $size === 'post-thumbnail' ) {
-		return 'featured-image';
-	}
-
-	return $size;
-
-}
+add_image_size( 'genesis-singular-images', 405, 720, true );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
