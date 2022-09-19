@@ -682,7 +682,7 @@ th {
 
 .archive-description p {
 	max-width: 550px;
-	margin: auto;
+	margin: 0 auto;
 }
 
 /* Search Form
