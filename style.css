@@ -250,6 +250,10 @@ blockquote {
 	margin: 30px;
 }
 
+.display-font {
+	font-family: "awkward alone", sans-serif;
+}
+
 /* Headings
 --------------------------------------------- */
 
