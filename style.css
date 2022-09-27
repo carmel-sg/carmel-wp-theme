@@ -853,13 +853,14 @@ figcaption,
 
 .entry-content .wp-block-post-template .wp-block-post-featured-image img:hover {
 	display: block;
-	margin: 0;
-	transition: .2s;
+	scale: 1.1;
+	opacity: 0.8;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-title {
-	scale: 1.1;
-	opacity: 0.8;
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 4px;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-title a {
