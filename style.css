@@ -833,6 +833,8 @@ figcaption,
 
 .entry-content .wp-block-post-template .wp-block-post-featured-image {
 	margin: -16px -16px 16px -16px;
+	overflow: clip;
+	background: #000;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-featured-image a {
@@ -842,12 +844,18 @@ figcaption,
 .entry-content .wp-block-post-template .wp-block-post-featured-image img {
 	display: block;
 	margin: 0;
+	transition: .2s;
+}
+
+.entry-content .wp-block-post-template .wp-block-post-featured-image img:hover {
+	display: block;
+	margin: 0;
+	transition: .2s;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-title {
-	font-weight: 600;
-	font-size: 24px;
-	margin-bottom: 4px;
+	scale: 1.1;
+	opacity: 0.8;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-title a {
