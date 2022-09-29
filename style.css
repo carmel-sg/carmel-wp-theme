@@ -1068,7 +1068,7 @@ figcaption,
 
 .gb-block-accordion .gb-accordion-title {
 	font-size: 1.2em;
-	font-weight: bold;
+	font-style: italic;
 	list-style: none;
 	cursor: pointer;
 	padding: 0  40px 0 0;
