@@ -1332,6 +1332,11 @@ figcaption,
 	padding-left: 40px;
 }
 
+.entry-content li {
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
 .entry-content ol > li {
 	list-style-type: decimal;
 }
