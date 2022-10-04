@@ -25,7 +25,7 @@ $carmel_link_color_contrast   = carmel_color_contrast( $carmel_link_color );
 $carmel_link_color_brightness = carmel_color_brightness( $carmel_link_color, 35 );
 
 return [
-	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Lato:400,400i,600,700&display=swap',
+	'fonts-url'            => 'https://fonts.googleapis.com/css2?family=Caveat&family=Lato:ital,wght@0,400;0,700;1,400&display=swap',
 	'content-width'        => 1062,
 	'button-bg'            => $carmel_link_color,
 	'button-color'         => $carmel_link_color_contrast,

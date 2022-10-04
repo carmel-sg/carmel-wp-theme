@@ -158,14 +158,6 @@ body {
 /* Typographical Elements
 --------------------------------------------- */
 
-@font-face {
-	font-family: "awkward alone";
-	src: url(fonts/awkwardalone.woff2) format("woff2"), url(fonts/awkwardalone.woff) format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
 html {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -251,7 +243,7 @@ blockquote {
 }
 
 .display-font {
-	font-family: "awkward alone", sans-serif;
+	font-family: 'Caveat', cursive;
 }
 
 /* Headings
@@ -669,9 +661,8 @@ th {
 .archive-title,
 .author-box-title {
 	font-size: 75px;
-	font-weight: 200;
 	margin-bottom: 10px;
-	font-family: "awkward alone", sans-serif;
+	font-family: 'Caveat', cursive;
 }
 
 .archive-description p {
