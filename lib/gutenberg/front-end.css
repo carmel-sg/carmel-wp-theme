@@ -132,7 +132,6 @@
 ---------------------------------------------------------------------------- */
 
 .gb-block-cta .gb-button {
-	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 600;
 }
 
@@ -141,7 +140,6 @@
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 16px;
-	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 600;
 	padding: 15px 30px;
 	text-align: center;
@@ -182,7 +180,6 @@
 
 .site-container .wp-block-pullquote p,
 .site-container .wp-block-quote p {
-	font-family: "Source Sans Pro", serif;
 	font-size: 21px;
 	font-style: italic;
 	line-height: 1.8;
@@ -219,7 +216,6 @@
 .site-container .wp-block-quote cite {
 	color: #666;
 	display: block;
-	font-family: "Source Sans Pro", serif;
 	font-size: 16px;
 	font-style: italic;
 	margin-top: -25px;
