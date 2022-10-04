@@ -285,15 +285,6 @@ h4 {
 	font-size: 20px;
 }
 
-.entry-content h3,
-.entry-content h4 {
-	font-weight: 600;
-}
-
-.entry-content h4 {
-	margin-top: 40px;
-}
-
 h5 {
 	font-size: 18px;
 }
@@ -1137,6 +1128,7 @@ figcaption,
 	width: 100%;
 	text-transform: uppercase;
 	text-align: center;
+	letter-spacing: 1px;
 }
 
 .genesis-nav-menu .menu-item {
@@ -1160,7 +1152,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: var(--carmel-accent-color-brighter);
+	background-color: var(--carmel-link-color);
 	text-decoration: none;
 }
 
