@@ -763,6 +763,8 @@ img.centered,
 
 .singular-image {
 	width: 100%;
+	border: 1px solid #eee;
+	border-radius: 8px;
 }
 
 img.alignnone,
