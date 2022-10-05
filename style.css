@@ -811,6 +811,7 @@ figcaption,
 .entry-content .wp-block-post-template li {
 	list-style: none;
 	background-color: #f5f5f5;
+	border:  1px solid #eee;
 	padding: 16px;
 	border-radius: 8px;
 	overflow: clip;
