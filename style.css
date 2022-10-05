@@ -820,7 +820,7 @@ figcaption,
 .entry-content .wp-block-post-template .wp-block-post-featured-image {
 	margin: -16px -16px 16px -16px;
 	overflow: clip;
-	background: #000;
+	background: #bbb;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-featured-image a {
