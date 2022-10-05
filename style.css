@@ -1150,8 +1150,8 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	background-color: var(--carmel-link-color);
 	text-decoration: none;
+	color: var(--carmel-accent-color-brighter);
 }
 
 .genesis-nav-menu .sub-menu,
@@ -1608,6 +1608,10 @@ p.entry-meta {
 		border-top: 0;
 		padding-bottom: 15px;
 		padding-top: 15px;
+	}
+
+	.genesis-nav-menu .sub-menu a:hover {
+		background-color: var(--carmel-link-color);
 	}
 
 	.genesis-nav-menu .sub-menu .sub-menu {
