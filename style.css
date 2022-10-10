@@ -5,7 +5,7 @@ Description: Carmel theme, forked from genesis-sample.
 Author: Carmel
 Author URI: https://carmel.sg/
 
-Version: 0.0.7
+Version: 0.0.8
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -814,13 +814,12 @@ figcaption,
 	list-style: none;
 	background-color: #f5f5f5;
 	border:  1px solid #eee;
-	padding: 16px;
+	padding: 0;
 	border-radius: 8px;
 	overflow: clip;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-featured-image {
-	margin: -16px -16px 16px -16px;
 	overflow: clip;
 	background: #bbb;
 }
@@ -844,7 +843,11 @@ figcaption,
 .entry-content .wp-block-post-template .wp-block-post-title {
 	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 4px;
+	margin: 16px;
+}
+
+.entry-content .wp-block-post-template .wp-block-post-title + * {
+	margin-top: -8px;
 }
 
 .entry-content .wp-block-post-template .wp-block-post-title a {
@@ -855,10 +858,7 @@ figcaption,
 
 .entry-content .wp-block-post-template p {
 	font-size: 16px;
-}
-
-.entry-content .wp-block-post-template p:last-child {
-	margin-bottom: 0;
+	margin: 16px;
 }
 
 .wp-block-pullquote {
