@@ -1234,7 +1234,7 @@ figcaption,
 	float: right;
 	padding: 15px 0;
 	position: relative;
-	z-index: 1000;
+	z-index: 10;
 }
 
 .menu-toggle.activated::before {
